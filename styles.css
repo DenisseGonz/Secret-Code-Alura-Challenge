@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Shrikhand&display=swap');
+:root{
+    --cafe_fondo: #3C3327;
+    --cafe_claro:#C5B99D;
+    --cafe_oscuro: #18120A;
+    --letras:#fff;
+    --titulos:  'Shrikhand', cursive;
+    --letraGeneral:'Anonymous Pro', monospace;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing:unset;
+    font-family: var(--letraGeneral);
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+html{
+    scroll-snap-type: y mandatory;
+}
+#fondo,#principal{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+#fondo{
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+#enigma{
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(30%);
+}
+#titulos{
+    margin-top: 32vh;
+}
+#nextPage{
+    margin-top: 28vh;
+}
+h1,h4{
+    color: var(--cafe_claro);
+    font-family: var(--titulos);
+}
+.SC{
+    font-size: 76px;
+}
+.DG{
+    font-size: 22px;
+}
+#principal{
+    background-color:var(--cafe_fondo);
+    padding: 5%;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+h3,h6,p{
+    color: var(--letras);
+}
+#modos{
+    width: 45%;
+    margin-bottom: 3%;
+}
+.btn.decript,.btn.encript,.btn.copiar{
+    background-color: var(--cafe_oscuro);
+    color: var(--letras);
+    border-color:var(--cafe_claro);
+}
+.btn-secondary:not(:disabled):not(.disabled).encript.active, .btn-secondary:not(:disabled):not(.disabled).decript.active{
+    background-color: var(--cafe_claro);
+    color: var(--cafe_oscuro);
+    border-color:var(--cafe_oscuro);
+}
+.btn.encript:hover,.btn.decript:hover,.btn.copiar:hover{
+    background-color: var(--cafe_claro);
+    border-color: var(--cafe_fondo);
+    color: var(--cafe_oscuro);
+}
+/*hacer la salida no editable*/
+#recepcion,#salida{
+    height: 50vh;
+    width: 42%;
+    resize: none;
+    background-color: var(--cafe_claro);
+    padding: 2%;
+    border-radius: 20px;
+}
+#compiler{
+    margin: 0 2%;
+    background-color: var(--cafe_claro);
+    color: var(--cafe_oscuro);
+    border-color:var(--cafe_oscuro);
+}
+#compiler:hover{
+    background-color: var(--cafe_oscuro);
+    border-color: var(--cafe_fondo);
+    color: var(--letras);
+}
+.copiar{
+    margin-left: 87%;
+    margin-top: 1%;
+}
